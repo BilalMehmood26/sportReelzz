@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav_graph"
+    app:startDestination="@id/myHomeFragment">
+
+    <fragment
+        android:id="@+id/myHomeFragment"
+        android:name="com.usaclean.sportreelzz.ui.main.home.MyHomeFragment"
+        android:label="fragment_my_home"
+        tools:layout="@layout/fragment_my_home" >
+        <action
+            android:id="@+id/action_myHomeFragment_to_createNewTopicFragment"
+            app:destination="@id/createNewTopicFragment" />
+        <action
+            android:id="@+id/action_myHomeFragment_to_topicDetailsFragment"
+            app:destination="@id/topicDetailsFragment" />
+        <action
+            android:id="@+id/action_myHomeFragment_to_filterFragment"
+            app:destination="@id/filterFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/createNewTopicFragment"
+        android:name="com.usaclean.sportreelzz.ui.main.newTopic.CreateNewTopicFragment"
+        android:label="fragment_create_new_topic"
+        tools:layout="@layout/fragment_create_new_topic" />
+    <fragment
+        android:id="@+id/topicDetailsFragment"
+        android:name="com.usaclean.sportreelzz.ui.main.topicDetails.TopicDetailsFragment"
+        android:label="fragment_topic_details"
+        tools:layout="@layout/fragment_topic_details" />
+    <fragment
+        android:id="@+id/myTopicsFragment"
+        android:name="com.usaclean.sportreelzz.ui.main.myTopic.MyTopicsFragment"
+        android:label="fragment_my_topics"
+        tools:layout="@layout/fragment_my_topics" >
+        <action
+            android:id="@+id/action_myTopicsFragment_to_filterFragment"
+            app:destination="@id/filterFragment" />
+        <action
+            android:id="@+id/action_myTopicsFragment_to_topicDetailsFragment"
+            app:destination="@id/topicDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment2"
+        android:name="com.usaclean.sportreelzz.ui.main.profile.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_profileFragment2_to_editProfileFragment"
+            app:destination="@id/editProfileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/editProfileFragment"
+        android:name="com.usaclean.sportreelzz.ui.main.profile.editProfile.EditProfileFragment"
+        android:label="fragment_edit_profile"
+        tools:layout="@layout/fragment_edit_profile" />
+    <fragment
+        android:id="@+id/filterFragment"
+        android:name="com.usaclean.sportreelzz.ui.main.filter.FilterFragment"
+        android:label="fragment_filter"
+        tools:layout="@layout/fragment_filter" />
+</navigation>

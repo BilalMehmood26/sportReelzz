@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_marginTop="@dimen/_10sdp"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/_17sdp"
+    android:layout_marginEnd="@dimen/_17sdp"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/green"
+    android:paddingBottom="@dimen/_11sdp">
+
+    <ImageView
+        android:id="@+id/profileIV"
+        android:layout_width="@dimen/_30sdp"
+        android:layout_height="@dimen/_30sdp"
+        android:src="@drawable/profile_dummy"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:radius="@dimen/_20sdp" />
+
+    <TextView
+        android:id="@+id/userNameTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrats_semibold"
+        android:paddingLeft="@dimen/_10sdp"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_12sdp"
+        app:layout_constraintStart_toEndOf="@+id/profileIV"
+        app:layout_constraintTop_toTopOf="@+id/profileIV"
+        tools:text="Jhon Erick" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrat_medium"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:text="1:23 min"
+        android:textColor="@color/grey_12"
+        android:textSize="@dimen/_9sdp"
+        app:layout_constraintBottom_toBottomOf="@+id/userNameTV"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/userNameTV"
+        app:layout_constraintTop_toTopOf="@+id/userNameTV" />
+
+
+    <TextView
+        android:id="@+id/contentTV"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrat_medium"
+        android:paddingLeft="@dimen/_10sdp"
+        android:paddingRight="@dimen/_30sdp"
+        android:textColor="@color/grey_12"
+        android:textSize="@dimen/_9sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/profileIV"
+        app:layout_constraintTop_toBottomOf="@+id/userNameTV"
+        tools:text="Lorem Ipsum is simply dummy text of the printing and typesetting industry." />
+
+
+    <ImageView
+        android:id="@+id/thumbUpIV"
+        android:layout_width="@dimen/_17sdp"
+        android:layout_height="@dimen/_18sdp"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_3sdp"
+        android:padding="@dimen/_3sdp"
+        app:layout_constraintStart_toEndOf="@+id/profileIV"
+        app:layout_constraintTop_toBottomOf="@+id/contentTV"
+        tools:srcCompat="@drawable/ic_like"
+        app:tint="@color/black" />
+
+    <TextView
+        android:id="@+id/thumbUpTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_4sdp"
+        android:text="15k"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_10sdp"
+        app:layout_constraintBottom_toBottomOf="@+id/thumbUpIV"
+        app:layout_constraintStart_toEndOf="@+id/thumbUpIV"
+        app:layout_constraintTop_toTopOf="@+id/thumbUpIV" />
+
+    <ImageView
+        android:id="@+id/thumbDownIV"
+        android:layout_width="@dimen/_17sdp"
+        android:layout_height="@dimen/_18sdp"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:padding="@dimen/_3sdp"
+        app:layout_constraintBottom_toBottomOf="@+id/thumbUpTV"
+        app:layout_constraintStart_toEndOf="@+id/thumbUpTV"
+        app:layout_constraintTop_toTopOf="@+id/thumbUpTV"
+        app:srcCompat="@drawable/ic_dislike_black"
+        app:tint="@color/black" />
+
+
+    <TextView
+        android:id="@+id/thumbDownTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_4sdp"
+        android:text="105"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_10sdp"
+        app:layout_constraintBottom_toBottomOf="@+id/thumbDownIV"
+        app:layout_constraintStart_toEndOf="@+id/thumbDownIV"
+        app:layout_constraintTop_toTopOf="@+id/thumbDownIV" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

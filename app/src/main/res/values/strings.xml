@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Sport Reelzz</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="sign_in">Sign In</string>
+    <string name="login">Login</string>
+    <string name="register">Register</string>
+    <string name="sportreelzz">SportReelzz</string>
+</resources>
