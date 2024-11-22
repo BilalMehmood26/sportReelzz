@@ -9,7 +9,7 @@
     <View
         android:id="@+id/view3"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/_90sdp"
+        android:layout_height="@dimen/_80sdp"
         android:background="@drawable/bottom_round_corner_white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -34,7 +34,7 @@
         android:fontFamily="@font/montserrats_semibold"
         android:text="Filter"
         android:textColor="@color/black"
-        android:textSize="@dimen/_18ssp"
+        android:textSize="@dimen/_16ssp"
         app:layout_constraintBottom_toBottomOf="@+id/back_iv"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -68,12 +68,14 @@
         <EditText
             android:id="@+id/editText"
             android:layout_width="0dp"
-            android:layout_height="@dimen/_40sdp"
+            android:layout_height="@dimen/_38sdp"
             android:layout_marginTop="@dimen/_4sdp"
             android:layout_marginEnd="@dimen/_17sdp"
             android:background="@drawable/edit_text_grey_12"
             android:hint="Enter Subject"
             android:paddingStart="@dimen/_12sdp"
+            android:fontFamily="@font/montserrat_medium"
+            android:textSize="@dimen/_12sdp"
             android:textColorHint="@color/grey"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="@+id/textView13"
@@ -95,12 +97,14 @@
         <EditText
             android:id="@+id/question_editText"
             android:layout_width="0dp"
-            android:layout_height="@dimen/_40sdp"
+            android:layout_height="@dimen/_38sdp"
             android:layout_marginTop="@dimen/_4sdp"
             android:layout_marginEnd="@dimen/_17sdp"
             android:background="@drawable/edit_text_grey_12"
             android:hint="Enter Question"
             android:paddingStart="@dimen/_12sdp"
+            android:fontFamily="@font/montserrat_medium"
+            android:textSize="@dimen/_12sdp"
             android:textColorHint="@color/grey"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="@+id/textView13"
@@ -139,6 +143,8 @@
                 android:layout_height="match_parent"
                 android:background="@drawable/edit_text_grey_12"
                 android:inputType="none"
+                android:fontFamily="@font/montserrat_medium"
+                android:textSize="@dimen/_12sdp"
                 android:paddingStart="@dimen/_14sdp" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -174,15 +180,19 @@
                 android:layout_height="match_parent"
                 android:background="@drawable/edit_text_grey_12"
                 android:inputType="none"
+                android:fontFamily="@font/montserrat_medium"
+                android:textSize="@dimen/_12sdp"
                 android:paddingStart="@dimen/_14sdp" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/create_btn"
             android:layout_width="0dp"
-            android:layout_height="@dimen/_50sdp"
+            android:layout_height="@dimen/_45sdp"
             android:backgroundTint="@color/dark_grey"
             android:text="Show Results"
+            android:fontFamily="@font/montserrat_medium"
+            android:textSize="@dimen/_13sdp"
             android:layout_marginTop="@dimen/_17sdp"
             app:layout_constraintEnd_toEndOf="@+id/textInputLayout"
             app:layout_constraintStart_toStartOf="@+id/textInputLayout"

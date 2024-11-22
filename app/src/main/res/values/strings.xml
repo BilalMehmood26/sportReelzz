@@ -5,4 +5,6 @@
     <string name="login">Login</string>
     <string name="register">Register</string>
     <string name="sportreelzz">SportReelzz</string>
+    <string name="register_underline"><u><b>Register</b></u></string>
+    <string name="login_underline"><u><b>Login</b></u></string>
 </resources>

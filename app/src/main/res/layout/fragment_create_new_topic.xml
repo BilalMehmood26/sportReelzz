@@ -9,7 +9,7 @@
     <View
         android:id="@+id/view3"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/_90sdp"
+        android:layout_height="@dimen/_80sdp"
         android:background="@drawable/bottom_round_corner_white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -20,20 +20,20 @@
         android:layout_width="@dimen/_35sdp"
         android:layout_height="@dimen/_35sdp"
         android:layout_marginStart="@dimen/_14sdp"
-        android:layout_marginBottom="@dimen/_12sdp"
         android:padding="@dimen/_10sdp"
         android:src="@drawable/ic_back"
-        app:layout_constraintBottom_toBottomOf="@+id/view3"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintBottom_toBottomOf="@+id/textView12"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView12" />
 
     <TextView
         android:id="@+id/textView12"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/_17sdp"
+        android:layout_marginBottom="@dimen/_22sdp"
         android:fontFamily="@font/montserrats_semibold"
         android:text="Create a New Topic"
-        android:textSize="@dimen/_17ssp"
+        android:textSize="@dimen/_16ssp"
         app:layout_constraintBottom_toBottomOf="@+id/view3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -67,11 +67,13 @@
             <EditText
                 android:id="@+id/editText"
                 android:layout_width="0dp"
-                android:layout_height="@dimen/_45sdp"
+                android:layout_height="@dimen/_38sdp"
                 android:layout_marginTop="@dimen/_4sdp"
                 android:layout_marginEnd="@dimen/_17sdp"
                 android:background="@drawable/edit_text_white_bg_12"
                 android:hint="Enter Subject"
+                android:fontFamily="@font/montserrat_medium"
+                android:textSize="@dimen/_12sdp"
                 android:paddingStart="@dimen/_12sdp"
                 android:textColorHint="@color/grey"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -94,12 +96,14 @@
             <EditText
                 android:id="@+id/question_editText"
                 android:layout_width="0dp"
-                android:layout_height="@dimen/_45sdp"
+                android:layout_height="@dimen/_38sdp"
                 android:layout_marginTop="@dimen/_4sdp"
                 android:layout_marginEnd="@dimen/_17sdp"
                 android:background="@drawable/edit_text_white_bg_12"
                 android:hint="Enter Question"
                 android:paddingStart="@dimen/_12sdp"
+                android:fontFamily="@font/montserrat_medium"
+                android:textSize="@dimen/_12sdp"
                 android:textColorHint="@color/grey"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="@+id/textView13"
@@ -138,6 +142,8 @@
                     android:layout_height="match_parent"
                     android:background="@drawable/edit_text_white_bg_12"
                     android:inputType="none"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:textSize="@dimen/_12sdp"
                     android:paddingStart="@dimen/_14sdp" />
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -173,6 +179,8 @@
                     android:layout_height="match_parent"
                     android:background="@drawable/edit_text_white_bg_12"
                     android:inputType="none"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:textSize="@dimen/_12sdp"
                     android:paddingStart="@dimen/_14sdp" />
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -224,10 +232,11 @@
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/create_btn"
                 android:layout_width="0dp"
-                android:layout_height="@dimen/_50sdp"
+                android:layout_height="@dimen/_46sdp"
                 android:layout_marginTop="@dimen/_20sdp"
                 android:backgroundTint="@color/green"
                 android:text="Create Topic"
+                android:fontFamily="@font/montserrat_medium"
                 app:layout_constraintEnd_toEndOf="@+id/view5"
                 app:layout_constraintStart_toStartOf="@+id/view5"
                 app:layout_constraintTop_toBottomOf="@+id/view5" />

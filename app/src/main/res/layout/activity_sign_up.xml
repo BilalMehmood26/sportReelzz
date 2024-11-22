@@ -19,126 +19,151 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/_40sdp"
-        android:fontFamily="@font/montserrats_semibold"
-        android:text="@string/register"
-        android:textColor="@color/black"
-        android:textSize="@dimen/_18ssp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
-
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/_10sdp"
         android:gravity="center"
-        android:text="Enter the details below to create \nan account"
-        android:textColor="@color/grey"
-        android:textSize="@dimen/_10ssp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintTop_toBottomOf="@+id/imageView">
 
-    <EditText
-        android:id="@+id/user_name_et"
-        android:layout_width="0dp"
-        android:layout_height="@dimen/_40sdp"
-        android:layout_marginStart="@dimen/_17sdp"
-        android:layout_marginTop="@dimen/_20sdp"
-        android:layout_marginEnd="@dimen/_17sdp"
-        android:background="@drawable/edit_text_white_bg_12"
-        android:hint="Username*"
-        android:inputType="textEmailAddress"
-        android:paddingStart="@dimen/_15sdp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrats_semibold"
+            android:text="@string/register"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_17ssp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
-    <EditText
-        android:id="@+id/email_et"
-        android:layout_width="0dp"
-        android:layout_height="@dimen/_40sdp"
-        android:layout_marginStart="@dimen/_17sdp"
-        android:layout_marginTop="@dimen/_10sdp"
-        android:layout_marginEnd="@dimen/_17sdp"
-        android:background="@drawable/edit_text_white_bg_12"
-        android:hint="Email address*"
-        android:inputType="textEmailAddress"
-        android:paddingStart="@dimen/_15sdp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/user_name_et" />
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:fontFamily="@font/montserrat_regular"
+            android:gravity="center"
+            android:text="Enter the details below to create \nan account"
+            android:textColor="@color/grey"
+            android:textSize="@dimen/_10ssp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
-    <EditText
-        android:id="@+id/password_et"
-        android:layout_width="0dp"
-        android:layout_height="@dimen/_40sdp"
-        android:layout_marginStart="@dimen/_17sdp"
-        android:layout_marginTop="@dimen/_10sdp"
-        android:layout_marginEnd="@dimen/_17sdp"
-        android:background="@drawable/edit_text_white_bg_12"
-        android:hint="Password*"
-        android:inputType="textPassword"
-        android:paddingStart="@dimen/_15sdp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/email_et" />
+        <EditText
+            android:id="@+id/user_name_et"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginStart="@dimen/_17sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginEnd="@dimen/_17sdp"
+            android:background="@drawable/edit_text_white_bg_12"
+            android:fontFamily="@font/montserrat_regular"
+            android:hint="Username*"
+            android:inputType="textEmailAddress"
+            android:paddingStart="@dimen/_15sdp"
+            android:textSize="@dimen/_11sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="@dimen/_15sdp"
-        android:layout_height="@dimen/_15sdp"
-        android:layout_marginEnd="@dimen/_10sdp"
-        android:src="@drawable/ic_password_visible"
-        app:layout_constraintBottom_toBottomOf="@+id/password_et"
-        app:layout_constraintEnd_toEndOf="@+id/password_et"
-        app:layout_constraintTop_toTopOf="@+id/password_et" />
+        <EditText
+            android:id="@+id/email_et"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginStart="@dimen/_17sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_17sdp"
+            android:background="@drawable/edit_text_white_bg_12"
+            android:fontFamily="@font/montserrat_regular"
+            android:hint="Email address*"
+            android:inputType="textEmailAddress"
+            android:paddingStart="@dimen/_15sdp"
+            android:textSize="@dimen/_11sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/user_name_et" />
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/sign_up_btn"
-        android:layout_width="0dp"
-        android:layout_height="@dimen/_50sdp"
-        android:layout_marginTop="@dimen/_20sdp"
-        android:backgroundTint="@color/green"
-        android:fontFamily="@font/montserrats_semibold"
-        android:text="@string/sign_up"
-        android:textSize="@dimen/_14ssp"
-        app:layout_constraintEnd_toEndOf="@+id/password_et"
-        app:layout_constraintStart_toStartOf="@+id/password_et"
-        app:layout_constraintTop_toBottomOf="@+id/password_et" />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_17sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_17sdp">
 
-    <TextView
-        android:id="@+id/textView7"
-        android:layout_width="wrap_content"
+            <EditText
+                android:id="@+id/password_et"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_40sdp"
+                android:background="@drawable/edit_text_white_bg_12"
+                android:fontFamily="@font/montserrat_regular"
+                android:hint="Password*"
+                android:inputType="textPassword"
+                android:paddingStart="@dimen/_15sdp"
+                android:textSize="@dimen/_11sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="@dimen/_15sdp"
+                android:layout_height="@dimen/_15sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:src="@drawable/ic_password_visible"
+                app:layout_constraintBottom_toBottomOf="@+id/password_et"
+                app:layout_constraintEnd_toEndOf="@+id/password_et"
+                app:layout_constraintTop_toTopOf="@+id/password_et" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/sign_up_btn"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_46sdp"
+            android:layout_marginStart="@dimen/_17sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginEnd="@dimen/_17sdp"
+            android:backgroundTint="@color/green"
+            android:fontFamily="@font/montserrats_semibold"
+            android:text="@string/sign_up"
+            android:textSize="@dimen/_14ssp"
+            app:layout_constraintEnd_toEndOf="@+id/password_et"
+            app:layout_constraintStart_toStartOf="@+id/password_et"
+            app:layout_constraintTop_toBottomOf="@+id/password_et" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/_10sdp"
-        android:fontFamily="@font/montserrats_semibold"
-        android:padding="@dimen/_4sdp"
-        android:text="Already have an account? "
-        android:textSize="@dimen/_10ssp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/login_btn"
-        app:layout_constraintHorizontal_chainStyle="packed"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent">
 
-    <TextView
-        android:id="@+id/login_btn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/_10sdp"
-        android:fontFamily="@font/montserrats_semibold"
-        android:padding="@dimen/_4sdp"
-        android:text="Login"
-        android:textColor="@color/green"
-        android:textSize="@dimen/_10ssp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textView7" />
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrats_semibold"
+            android:padding="@dimen/_4sdp"
+            android:text="Already have an account? "
+            android:textSize="@dimen/_10ssp" />
+
+        <TextView
+            android:id="@+id/login_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrats_semibold"
+            android:padding="@dimen/_4sdp"
+            android:text="@string/login_underline"
+            android:textColor="@color/green"
+            android:textSize="@dimen/_10ssp" />
+
+    </LinearLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
