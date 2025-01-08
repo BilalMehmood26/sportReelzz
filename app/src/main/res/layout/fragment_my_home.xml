@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/dark_grey"
     tools:context=".ui.main.home.MyHomeFragment">
 
 
@@ -11,7 +12,7 @@
         android:id="@+id/view3"
         android:layout_width="match_parent"
         android:layout_height="@dimen/_90sdp"
-        android:background="@drawable/bottom_round_corner_gradient"
+        android:background="@drawable/bottom_round_corner_white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -24,7 +25,7 @@
         android:layout_marginBottom="@dimen/_22sdp"
         android:fontFamily="@font/montserrats_semibold"
         android:text="@string/sportreelzz"
-        android:textColor="@color/white"
+        android:textColor="@color/light_brown"
         android:textSize="@dimen/_16ssp"
         app:layout_constraintBottom_toBottomOf="@+id/view3"
         app:layout_constraintEnd_toEndOf="parent"
@@ -36,18 +37,30 @@
         android:layout_height="@dimen/_15sdp"
         android:layout_marginEnd="@dimen/_22sdp"
         android:src="@drawable/ic_filter"
+        app:tint="@color/light_brown"
         app:layout_constraintBottom_toBottomOf="@+id/textView8"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/textView8" />
 
+    <ImageView
+        android:id="@+id/language_iv"
+        android:layout_width="@dimen/_15sdp"
+        android:layout_height="@dimen/_15sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:src="@drawable/ic_language"
+        app:tint="@color/light_brown"
+        app:layout_constraintBottom_toBottomOf="@+id/textView8"
+        app:layout_constraintEnd_toStartOf="@+id/filter_iv"
+        app:layout_constraintTop_toTopOf="@+id/textView8" />
+
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/stroy_rv"
+        android:id="@+id/story_rv"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:layout_marginBottom="@dimen/_2sdp"
         android:paddingStart="@dimen/_15sdp"
         android:paddingEnd="@dimen/_15sdp"
-        android:layout_marginBottom="@dimen/_2sdp"
         app:layout_constraintBottom_toTopOf="@+id/materialButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -62,11 +75,23 @@
         android:layout_marginStart="@dimen/_17sdp"
         android:layout_marginEnd="@dimen/_17sdp"
         android:layout_marginBottom="@dimen/_14sdp"
-        android:backgroundTint="@color/green"
+        android:backgroundTint="@color/black"
+        android:textColor="@color/light_brown"
         android:fontFamily="@font/montserrat_medium"
-        android:text="Create a New Topic"
+        android:text="@string/create_a_new_topic"
         android:textSize="@dimen/_12ssp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view3" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

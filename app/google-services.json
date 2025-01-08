@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "955897310038",
+    "project_id": "sport-reelzz",
+    "storage_bucket": "sport-reelzz.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:955897310038:android:bba247850ee02fbee4c4f7",
+        "android_client_info": {
+          "package_name": "com.usaclean.sportreelzz"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCIRXkCawSfD0iqEHT4k7SFc3wPhfue4X0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

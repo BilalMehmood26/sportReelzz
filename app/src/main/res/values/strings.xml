@@ -1,10 +1,112 @@
 <resources>
-    <string name="app_name">Sport Reelzz</string>
+    <string name="app_name">CoachClip</string>
     <string name="sign_up">Sign Up</string>
     <string name="sign_in">Sign In</string>
     <string name="login">Login</string>
     <string name="register">Register</string>
-    <string name="sportreelzz">SportReelzz</string>
+    <string name="sportreelzz" translatable="false">CoachClip</string>
     <string name="register_underline"><u><b>Register</b></u></string>
     <string name="login_underline"><u><b>Login</b></u></string>
+    <string name="home">Home</string>
+    <string name="my_tpoics">My Clip</string>
+    <string name="profile">Profile</string>
+    <string name="login_sub_text">Enter your Username and password to login to \nyour account</string>
+    <string name="username">Email Address*</string>
+    <string name="password">Password*</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="or_sign_in_with">Or Sign in With</string>
+    <string name="new_to_coachclip">New to CoachClip?</string>
+    <string name="coach">Coach</string>
+    <string name="clip">Clip</string>
+    <string name="register_sub_heading">Enter the details below to create \nan account</string>
+    <string name="email_address">Email address*</string>
+    <string name="already_have_an_account">Already have an account?</string>
+    <string name="forget_password">Forget Password</string>
+    <string name="email_address_with_staric">Email Address</string>
+    <string name="submit">Submit</string>
+    <string name="add_video_chapters">Add Video Chapters</string>
+    <string name="add_chapters">Add Chapters</string>
+    <string name="create_a_new_topic">Create a new clip</string>
+    <string name="subject">Subject</string>
+    <string name="enter_subject">Enter Subject</string>
+    <string name="question">Question</string>
+    <string name="enter_question">Enter Question</string>
+    <string name="language">Language</string>
+    <string name="sport">Sport</string>
+    <string name="upload_video">Upload Video</string>
+    <string name="tap_to_upload">Tap to Upload</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="username_without_staric">Username</string>
+    <string name="password_without_staric">Password</string>
+    <string name="save_information">Save Information</string>
+    <string name="filter">Filter</string>
+    <string name="show_results">Show Results</string>
+    <string name="my_topics">My clips</string>
+    <string name="customer_support">Customer Support</string>
+    <string name="help_support">Help Support</string>
+    <string name="delete_account">Delete Account</string>
+    <string name="legal">Legal</string>
+    <string name="privacy_policy">Privacy Policy</string>
+    <string name="terms_of_service">Terms of Service</string>
+    <string name="chapter">Chapter</string>
+    <string name="delete">Delete</string>
+    <string name="edit">Edit</string>
+    <string name="update_info">Update Info</string>
+    <string name="report_clip_or_title">Report Clip</string>
+    <string name="sexual_content">Sexual content</string>
+    <string name="violent_or_repulsive_content">Violent or repulsive content</string>
+    <string name="hateful_or_abusive_content">Hateful or abusive content</string>
+    <string name="harmful_or_dangerous_acts">Harmful or dangerous acts</string>
+    <string name="spam_or_misleading">Spam or misleading</string>
+    <string name="child_abuse">Child abuse</string>
+    <string name="report">Report</string>
+    <string name="cancel">Cancel</string>
+    <string name="select_language">Select Language</string>
+    <string name="select_sports">Select Sports</string>
+    <string name="enter_comment_txt">Enter Comment</string>
+
+    <array name="language_list">
+        <item>Engels</item>
+        <item>Spanish</item>
+        <item>French</item>
+        <item>German</item>
+        <item>Italian</item>
+        <item>Portuguese</item>
+        <item>Dutch</item>
+        <item>Polish</item>
+        <item>Turkish</item>
+        <item>Swedish</item>
+        <item>Danish</item>
+        <item>Norwegian</item>
+        <item>Czech</item>
+        <item>Greek</item>
+    </array>
+
+    <array name="sports_list">
+        <item>Football</item>
+        <item>Padel</item>
+        <item>Fitness</item>
+        <item>Tennis</item>
+        <item>Basketball</item>
+        <item>Golf</item>
+        <item>Field Hockey</item>
+        <item>Volleyball</item>
+        <item>Badminton</item>
+        <item>Handball</item>
+        <item>Confidential</item>
+        <item>Athletics</item>
+        <item>Cycling</item>
+        <item>Rugby</item>
+        <item>Skiing/Snowboarding</item>
+        <item>Yoga/Pilates</item>
+    </array>
+    <string name="replies">Replies</string>
+    <string name="enter_reply">Enter Reply</string>
+    <string name="languages">Languages</string>
+    <string name="english">English</string>
+    <string name="dutch">Dutch</string>
+    <string name="create_clip">Create Clip</string>
+    <string name="preview_video"><u>Preview</u></string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

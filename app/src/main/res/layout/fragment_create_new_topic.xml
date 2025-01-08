@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/dark_grey"
     tools:context=".ui.main.newTopic.CreateNewTopicFragment">
 
     <View
@@ -22,6 +23,7 @@
         android:layout_marginStart="@dimen/_14sdp"
         android:padding="@dimen/_10sdp"
         android:src="@drawable/ic_back"
+        app:tint="@color/light_brown"
         app:layout_constraintBottom_toBottomOf="@+id/textView12"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/textView12" />
@@ -32,8 +34,9 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="@dimen/_22sdp"
         android:fontFamily="@font/montserrats_semibold"
-        android:text="Create a New Topic"
+        android:text="@string/create_a_new_topic"
         android:textSize="@dimen/_16ssp"
+        android:textColor="@color/light_brown"
         app:layout_constraintBottom_toBottomOf="@+id/view3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -48,8 +51,8 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:paddingBottom="@dimen/_20sdp"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:paddingBottom="@dimen/_20sdp">
 
             <TextView
                 android:id="@+id/textView13"
@@ -58,24 +61,25 @@
                 android:layout_marginStart="@dimen/_17sdp"
                 android:layout_marginTop="@dimen/_27sdp"
                 android:fontFamily="@font/montserrats_semibold"
-                android:text="Subject"
-                android:textColor="@color/black"
+                android:text="@string/subject"
+                android:textColor="@color/white"
                 android:textSize="@dimen/_10ssp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <EditText
-                android:id="@+id/editText"
+                android:id="@+id/subject_et"
                 android:layout_width="0dp"
                 android:layout_height="@dimen/_38sdp"
                 android:layout_marginTop="@dimen/_4sdp"
                 android:layout_marginEnd="@dimen/_17sdp"
                 android:background="@drawable/edit_text_white_bg_12"
-                android:hint="Enter Subject"
                 android:fontFamily="@font/montserrat_medium"
-                android:textSize="@dimen/_12sdp"
+                android:hint="@string/enter_subject"
                 android:paddingStart="@dimen/_12sdp"
-                android:textColorHint="@color/grey"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textSize="@dimen/_12sdp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="@+id/textView13"
                 app:layout_constraintTop_toBottomOf="@+id/textView13" />
@@ -87,24 +91,27 @@
                 android:layout_marginStart="@dimen/_17sdp"
                 android:layout_marginTop="@dimen/_10sdp"
                 android:fontFamily="@font/montserrats_semibold"
-                android:text="Question"
-                android:textColor="@color/black"
+                android:text="@string/question"
+                android:textColor="@color/white"
                 android:textSize="@dimen/_10ssp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/editText" />
+                app:layout_constraintTop_toBottomOf="@+id/subject_et" />
 
             <EditText
                 android:id="@+id/question_editText"
                 android:layout_width="0dp"
-                android:layout_height="@dimen/_38sdp"
+                android:layout_height="wrap_content"
+                android:paddingVertical="@dimen/_10sdp"
                 android:layout_marginTop="@dimen/_4sdp"
                 android:layout_marginEnd="@dimen/_17sdp"
                 android:background="@drawable/edit_text_white_bg_12"
-                android:hint="Enter Question"
-                android:paddingStart="@dimen/_12sdp"
                 android:fontFamily="@font/montserrat_medium"
+                android:textColor="@color/white"
+                android:hint="@string/enter_question"
+                android:paddingStart="@dimen/_12sdp"
+                android:textColorHint="@color/white"
+                android:inputType="textMultiLine"
                 android:textSize="@dimen/_12sdp"
-                android:textColorHint="@color/grey"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="@+id/textView13"
                 app:layout_constraintTop_toBottomOf="@+id/question_tv" />
@@ -116,36 +123,42 @@
                 android:layout_marginStart="@dimen/_17sdp"
                 android:layout_marginTop="@dimen/_10sdp"
                 android:fontFamily="@font/montserrats_semibold"
-                android:text="Language"
-                android:textColor="@color/black"
+                android:text="@string/language"
+                android:textColor="@color/white"
                 android:textSize="@dimen/_10ssp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/question_editText" />
 
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/recipient_et"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+            <com.skydoves.powerspinner.PowerSpinnerView
+                android:id="@+id/language_et"
                 android:layout_width="0dp"
                 android:layout_height="@dimen/_40sdp"
                 android:layout_marginStart="@dimen/_17sdp"
                 android:layout_marginTop="@dimen/_4sdp"
                 android:layout_marginEnd="@dimen/_17sdp"
-                android:background="@null"
-                android:hint="Select"
+                android:background="@drawable/edit_text_white_bg_12"
+                android:fontFamily="@font/montserrat_regular"
+                android:gravity="start"
+                android:hint="@string/select_language"
+                android:paddingHorizontal="@dimen/_15sdp"
+                android:paddingVertical="@dimen/_12sdp"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textSize="@dimen/_11sdp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView14">
-
-                <AutoCompleteTextView
-                    android:id="@+id/filled_exposed_dropdown"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="@drawable/edit_text_white_bg_12"
-                    android:inputType="none"
-                    android:fontFamily="@font/montserrat_medium"
-                    android:textSize="@dimen/_12sdp"
-                    android:paddingStart="@dimen/_14sdp" />
-            </com.google.android.material.textfield.TextInputLayout>
+                app:layout_constraintTop_toBottomOf="@+id/textView14"
+                app:spinner_arrow_drawable="@drawable/icon_dropdown_small"
+                app:spinner_arrow_gravity="end"
+                app:spinner_arrow_padding="@dimen/_7sdp"
+                app:spinner_divider_color="@color/light_brown"
+                app:spinner_divider_show="true"
+                app:spinner_divider_size="0.4dp"
+                app:spinner_item_array="@array/language_list"
+                app:spinner_popup_animation="dropdown"
+                app:spinner_popup_background="@drawable/bg_box"
+                app:spinner_popup_elevation="@dimen/_10sdp"
+                tools:ignore="HardcodedText,UnusedAttribute" />
 
             <TextView
                 android:id="@+id/textView15"
@@ -154,35 +167,42 @@
                 android:layout_marginStart="@dimen/_17sdp"
                 android:layout_marginTop="@dimen/_10sdp"
                 android:fontFamily="@font/montserrats_semibold"
-                android:text="Sport"
-                android:textColor="@color/black"
+                android:text="@string/sport"
+                android:textColor="@color/white"
                 android:textSize="@dimen/_10ssp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/recipient_et" />
+                app:layout_constraintTop_toBottomOf="@+id/language_et" />
 
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/textInputLayout"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+            <com.skydoves.powerspinner.PowerSpinnerView
+                android:id="@+id/sports_et"
                 android:layout_width="0dp"
                 android:layout_height="@dimen/_40sdp"
                 android:layout_marginStart="@dimen/_17sdp"
                 android:layout_marginTop="@dimen/_4sdp"
                 android:layout_marginEnd="@dimen/_17sdp"
-                android:background="@null"
-                android:hint="Select"
+                android:background="@drawable/edit_text_white_bg_12"
+                android:fontFamily="@font/montserrat_regular"
+                android:gravity="start"
+                android:hint="@string/select_sports"
+                android:paddingHorizontal="@dimen/_15sdp"
+                android:paddingVertical="@dimen/_12sdp"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textSize="@dimen/_11sdp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView15">
-
-                <AutoCompleteTextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="@drawable/edit_text_white_bg_12"
-                    android:inputType="none"
-                    android:fontFamily="@font/montserrat_medium"
-                    android:textSize="@dimen/_12sdp"
-                    android:paddingStart="@dimen/_14sdp" />
-            </com.google.android.material.textfield.TextInputLayout>
+                app:layout_constraintTop_toBottomOf="@+id/textView15"
+                app:spinner_arrow_drawable="@drawable/icon_dropdown_small"
+                app:spinner_arrow_gravity="end"
+                app:spinner_arrow_padding="@dimen/_7sdp"
+                app:spinner_divider_color="@color/light_brown"
+                app:spinner_divider_show="true"
+                app:spinner_divider_size="0.4dp"
+                app:spinner_item_array="@array/sports_list"
+                app:spinner_popup_animation="dropdown"
+                app:spinner_popup_background="@drawable/bg_box"
+                app:spinner_popup_elevation="@dimen/_10sdp"
+                tools:ignore="HardcodedText,UnusedAttribute" />
 
             <TextView
                 android:id="@+id/textView16"
@@ -191,19 +211,19 @@
                 android:layout_marginStart="@dimen/_17sdp"
                 android:layout_marginTop="@dimen/_10sdp"
                 android:fontFamily="@font/montserrats_semibold"
-                android:text="Upload Video"
-                android:textColor="@color/black"
+                android:text="@string/upload_video"
+                android:textColor="@color/white"
                 android:textSize="@dimen/_10ssp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textInputLayout" />
+                app:layout_constraintTop_toBottomOf="@+id/sports_et" />
 
             <View
-                android:id="@+id/view5"
+                android:id="@+id/mediaPickerIV"
                 android:layout_width="0dp"
                 android:layout_height="@dimen/_120sdp"
                 android:layout_marginTop="@dimen/_4sdp"
                 android:background="@drawable/edit_text_white_bg_12"
-                app:layout_constraintEnd_toEndOf="@+id/textInputLayout"
+                app:layout_constraintEnd_toEndOf="@+id/sports_et"
                 app:layout_constraintStart_toStartOf="@+id/textView16"
                 app:layout_constraintTop_toBottomOf="@+id/textView16" />
 
@@ -212,21 +232,27 @@
                 android:layout_width="@dimen/_25sdp"
                 android:layout_height="@dimen/_25sdp"
                 android:src="@drawable/ic_play_btn"
-                app:layout_constraintBottom_toBottomOf="@+id/view5"
-                app:layout_constraintEnd_toEndOf="@+id/view5"
-                app:layout_constraintStart_toStartOf="@+id/view5"
-                app:layout_constraintTop_toTopOf="@+id/view5" />
+                app:tint="@color/white"
+                app:layout_constraintBottom_toBottomOf="@+id/mediaPickerIV"
+                app:layout_constraintEnd_toEndOf="@+id/mediaPickerIV"
+                app:layout_constraintStart_toStartOf="@+id/mediaPickerIV"
+                app:layout_constraintTop_toTopOf="@+id/mediaPickerIV" />
 
             <TextView
-                android:id="@+id/textView17"
-                android:layout_width="wrap_content"
+                android:id="@+id/upload_tv"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_6sdp"
                 android:fontFamily="@font/montserrat_regular"
-                android:text="Tap to Upload"
+                android:text="@string/tap_to_upload"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:layout_marginEnd="@dimen/_30sdp"
+                android:layout_marginStart="@dimen/_30sdp"
+                android:ellipsize="end"
                 android:textSize="@dimen/_11ssp"
-                app:layout_constraintEnd_toEndOf="@+id/imageView7"
-                app:layout_constraintStart_toStartOf="@+id/imageView7"
+                app:layout_constraintEnd_toEndOf="@+id/mediaPickerIV"
+                app:layout_constraintStart_toStartOf="@+id/mediaPickerIV"
                 app:layout_constraintTop_toBottomOf="@+id/imageView7" />
 
             <com.google.android.material.button.MaterialButton
@@ -234,14 +260,25 @@
                 android:layout_width="0dp"
                 android:layout_height="@dimen/_46sdp"
                 android:layout_marginTop="@dimen/_20sdp"
-                android:backgroundTint="@color/green"
-                android:text="Create Topic"
+                android:backgroundTint="@color/black"
                 android:fontFamily="@font/montserrat_medium"
-                app:layout_constraintEnd_toEndOf="@+id/view5"
-                app:layout_constraintStart_toStartOf="@+id/view5"
-                app:layout_constraintTop_toBottomOf="@+id/view5" />
+                android:text="@string/create_clip"
+                android:textColor="@color/light_brown"
+                app:layout_constraintEnd_toEndOf="@+id/mediaPickerIV"
+                app:layout_constraintStart_toStartOf="@+id/mediaPickerIV"
+                app:layout_constraintTop_toBottomOf="@+id/mediaPickerIV" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.core.widget.NestedScrollView>
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

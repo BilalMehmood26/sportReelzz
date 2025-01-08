@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".ui.main.myTopic.fullscreen.FullScreenVideoActivity">
+
+    <androidx.media3.ui.PlayerView
+        android:id="@+id/exo_videoView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:resize_mode="fit"
+        app:controller_layout_id="@layout/custom_player_control_view"
+        app:fullscreen_enter_icon="@drawable/ic_fullscreen_enter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:show_buffering="when_playing" />
+
+    <ImageView
+        android:id="@+id/play_iv"
+        android:layout_width="@dimen/_40sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:backgroundTint="@android:color/transparent"
+        android:src="@drawable/ic_play"
+        app:layout_constraintBottom_toBottomOf="@+id/exo_videoView"
+        app:layout_constraintEnd_toEndOf="@+id/exo_videoView"
+        app:layout_constraintStart_toStartOf="@+id/exo_videoView"
+        app:layout_constraintTop_toTopOf="@+id/exo_videoView" />
+
+
+    <ImageView
+        android:id="@+id/forward_iv"
+        android:layout_width="@dimen/_35sdp"
+        android:layout_height="@dimen/_35sdp"
+        android:backgroundTint="@android:color/transparent"
+        android:padding="@dimen/_6sdp"
+        android:src="@drawable/ic_5x_forward"
+        app:layout_constraintBottom_toBottomOf="@+id/exo_videoView"
+        app:layout_constraintEnd_toEndOf="@+id/exo_videoView"
+        app:layout_constraintStart_toEndOf="@+id/play_iv"
+        app:layout_constraintTop_toTopOf="@+id/exo_videoView" />
+
+    <ImageView
+        android:id="@+id/backward_iv"
+        android:layout_width="@dimen/_35sdp"
+        android:layout_height="@dimen/_35sdp"
+        android:backgroundTint="@android:color/transparent"
+        android:padding="@dimen/_6sdp"
+        android:src="@drawable/ic_5x_backward"
+        app:layout_constraintBottom_toBottomOf="@+id/exo_videoView"
+        app:layout_constraintEnd_toStartOf="@+id/play_iv"
+        app:layout_constraintStart_toStartOf="@+id/exo_videoView"
+        app:layout_constraintTop_toTopOf="@+id/exo_videoView" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/_4sdp"
+        app:layout_constraintBottom_toBottomOf="@+id/exo_videoView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageView
+            android:id="@+id/full_screen"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:backgroundTint="@android:color/transparent"
+            android:padding="@dimen/_4sdp"
+            android:src="@drawable/ic_fullscreen_exit"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

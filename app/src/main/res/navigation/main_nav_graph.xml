@@ -16,9 +16,6 @@
         <action
             android:id="@+id/action_myHomeFragment_to_topicDetailsFragment"
             app:destination="@id/topicDetailsFragment" />
-        <action
-            android:id="@+id/action_myHomeFragment_to_filterFragment"
-            app:destination="@id/filterFragment" />
     </fragment>
     <fragment
         android:id="@+id/createNewTopicFragment"
@@ -29,15 +26,19 @@
         android:id="@+id/topicDetailsFragment"
         android:name="com.usaclean.sportreelzz.ui.main.topicDetails.TopicDetailsFragment"
         android:label="fragment_topic_details"
-        tools:layout="@layout/fragment_topic_details" />
+        tools:layout="@layout/fragment_topic_details" >
+        <argument
+            android:name="story"
+            app:argType="com.usaclean.sportreelzz.model.Story" />
+        <action
+            android:id="@+id/action_topicDetailsFragment_to_replyCommentFragment"
+            app:destination="@id/replyCommentFragment" />
+    </fragment>
     <fragment
         android:id="@+id/myTopicsFragment"
         android:name="com.usaclean.sportreelzz.ui.main.myTopic.MyTopicsFragment"
         android:label="fragment_my_topics"
         tools:layout="@layout/fragment_my_topics" >
-        <action
-            android:id="@+id/action_myTopicsFragment_to_filterFragment"
-            app:destination="@id/filterFragment" />
         <action
             android:id="@+id/action_myTopicsFragment_to_topicDetailsFragment"
             app:destination="@id/topicDetailsFragment" />
@@ -61,4 +62,16 @@
         android:name="com.usaclean.sportreelzz.ui.main.filter.FilterFragment"
         android:label="fragment_filter"
         tools:layout="@layout/fragment_filter" />
+    <fragment
+        android:id="@+id/replyCommentFragment"
+        android:name="com.usaclean.sportreelzz.ui.main.topicDetails.reply.ReplyCommentFragment"
+        android:label="fragment_reply_comment"
+        tools:layout="@layout/fragment_reply_comment" >
+        <argument
+            android:name="comment"
+            app:argType="com.usaclean.sportreelzz.model.Comments" />
+        <argument
+            android:name="postID"
+            app:argType="string" />
+    </fragment>
 </navigation>
