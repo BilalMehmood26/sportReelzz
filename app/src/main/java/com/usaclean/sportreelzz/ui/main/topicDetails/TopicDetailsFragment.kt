@@ -424,7 +424,10 @@ class TopicDetailsFragment : Fragment() {
             }
 
             previewBtn.setOnClickListener {
-                previewDialogFragment = PreviewDialogFragment(videoURI!!)
+                previewDialogFragment = PreviewDialogFragment(videoURI!!){
+                    binding.previewBtn.gone()
+                    videoURI = null
+                }
                 previewDialogFragment.show(childFragmentManager, "")
             }
 
@@ -643,11 +646,12 @@ class TopicDetailsFragment : Fragment() {
                 Log.d("LOgger", "onActivityResult: $videoURI")
                 if(dialog!=null) dialog.findViewById<TextView>(R.id.preview_btn).visible()
                 binding.previewBtn.visible()
-                Toast.makeText(
-                    fragmentContext,
-                    "Video has been uploaded successfully.",
-                    Toast.LENGTH_SHORT
-                ).show()
+                previewDialogFragment = PreviewDialogFragment(videoURI!!){
+                    binding.previewBtn.gone()
+                    dialog.findViewById<TextView>(R.id.preview_btn).gone()
+                    videoURI = null
+                }
+                previewDialogFragment.show(childFragmentManager, "")
             }
         } else if (requestCode == REQUEST_CODE_RECORD_VIDEO && resultCode == Activity.RESULT_OK) {
             val capturedVideoUri = data?.data
@@ -655,12 +659,13 @@ class TopicDetailsFragment : Fragment() {
                 videoURI = capturedVideoUri
                 dialog.findViewById<TextView>(R.id.preview_btn).visible()
                 binding.previewBtn.visible()
+                previewDialogFragment = PreviewDialogFragment(videoURI!!){
+                    binding.previewBtn.gone()
+                    dialog.findViewById<TextView>(R.id.preview_btn).gone()
+                    videoURI = null
+                }
+                previewDialogFragment.show(childFragmentManager, "")
                 Log.d("LOgger", "onActivityResult: $videoURI")
-                Toast.makeText(
-                    fragmentContext,
-                    "Video has been uploaded successfully.",
-                    Toast.LENGTH_SHORT
-                ).show()
             }
         } else if (requestCode == REQUEST_CODE_CAPTURE_IMAGE && resultCode == Activity.RESULT_OK) {
             val selectedMediaUri = data?.data
@@ -668,12 +673,13 @@ class TopicDetailsFragment : Fragment() {
                 binding.previewBtn.visible()
                 dialog.findViewById<TextView>(R.id.preview_btn).visible()
                 videoURI = selectedMediaUri
+                previewDialogFragment = PreviewDialogFragment(videoURI!!){
+                    binding.previewBtn.gone()
+                    dialog.findViewById<TextView>(R.id.preview_btn).gone()
+                    videoURI = null
+                }
+                previewDialogFragment.show(childFragmentManager, "")
                 Log.d("LOgger", "onActivityResult: $videoURI")
-                Toast.makeText(
-                    fragmentContext,
-                    "Video has been uploaded successfully.",
-                    Toast.LENGTH_SHORT
-                ).show()
             }
         }
     }
@@ -747,9 +753,13 @@ class TopicDetailsFragment : Fragment() {
 
 
             previewBtn.setOnClickListener {
-                previewDialogFragment = PreviewDialogFragment(videoURI!!)
+                previewDialogFragment = PreviewDialogFragment(videoURI!!){
+                    binding.previewBtn.gone()
+                    videoURI = null
+                }
                 previewDialogFragment.show(childFragmentManager, "")
             }
+
             replyTv.setOnClickListener {
                 if (replyEt.text.isNotEmpty()) {
                     when {

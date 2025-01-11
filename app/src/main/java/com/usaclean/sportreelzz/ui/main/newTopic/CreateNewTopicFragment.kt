@@ -42,6 +42,7 @@ import com.skydoves.powerspinner.IconSpinnerItem
 import com.usaclean.sportreelzz.R
 import com.usaclean.sportreelzz.databinding.FragmentCreateNewTopicBinding
 import com.usaclean.sportreelzz.model.Chapter
+import com.usaclean.sportreelzz.ui.main.topicDetails.PreviewDialogFragment
 import com.usaclean.sportreelzz.utils.UserSession
 import com.usaclean.sportreelzz.utils.gone
 import com.usaclean.sportreelzz.utils.visible
@@ -54,7 +55,6 @@ class CreateNewTopicFragment : Fragment() {
     companion object {
         private const val REQUEST_CODE_SELECT_IMAGE_VIDEO = 1001
         private const val REQUEST_CODE_PERMISSIONS = 1002
-        private const val REQUEST_CODE_CAPTURE_IMAGE = 1003
         private const val REQUEST_CODE_RECORD_VIDEO = 1004
 
         fun newInstance() = CreateNewTopicFragment()
@@ -66,6 +66,7 @@ class CreateNewTopicFragment : Fragment() {
     private var _binding: FragmentCreateNewTopicBinding? = null
     private val binding get() = _binding!!
 
+    private lateinit var previewDialogFragment: PreviewDialogFragment
     private lateinit var videoChaptersDialogFragment: VideoChaptersDialogFragment
 
     private var videoURI: Uri? = null
@@ -94,7 +95,8 @@ class CreateNewTopicFragment : Fragment() {
         IconSpinnerItem(text = "Cycling", iconRes = R.drawable.ic_cycling),
         IconSpinnerItem(text = "Rugby", iconRes = R.drawable.ic_rugby),
         IconSpinnerItem(text = "Yoga/Pilates", iconRes = R.drawable.ic_yoga_pilates),
-        IconSpinnerItem(text = "Skiing/Snowboarding", iconRes = R.drawable.ic_snowboarding)
+        IconSpinnerItem(text = "Skiing/Snowboarding", iconRes = R.drawable.ic_snowboarding),
+        IconSpinnerItem(text = "Dart", iconRes = R.drawable.ic_dart)
     )
 
     private lateinit var viewModel: CreateNewTopicViewModel
@@ -130,6 +132,13 @@ class CreateNewTopicFragment : Fragment() {
                 getSpinnerRecyclerView().layoutManager = GridLayoutManager(fragmentContext, 1)
             }
 
+            previewBtn.setOnClickListener {
+                previewDialogFragment = PreviewDialogFragment(videoURI!!){
+                    videoURI = null
+                    previewBtn.gone()
+                }
+                previewDialogFragment.show(childFragmentManager, "")
+            }
             backIv.setOnClickListener {
                 findNavController().popBackStack()
             }
@@ -500,6 +509,12 @@ class CreateNewTopicFragment : Fragment() {
                 videoURI = selectedMediaUri
                 Log.d("LOgger", "onActivityResult: $videoURI")
                 binding.uploadTv.text = "Video Added"
+                binding.previewBtn.visible()
+                previewDialogFragment = PreviewDialogFragment(videoURI!!){
+                    videoURI = null
+                    binding.previewBtn.gone()
+                }
+                previewDialogFragment.show(childFragmentManager, "")
                 Toast.makeText(
                     fragmentContext,
                     "Video has been uploaded successfully.",
@@ -512,6 +527,7 @@ class CreateNewTopicFragment : Fragment() {
                 videoURI = capturedVideoUri
                 Log.d("LOgger", "onActivityResult: $videoURI")
                 binding.uploadTv.text = "Video Added"
+                binding.previewBtn.visible()
                 Toast.makeText(
                     fragmentContext,
                     "Video has been uploaded successfully.",

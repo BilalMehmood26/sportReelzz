@@ -19,13 +19,14 @@ import com.usaclean.sportreelzz.databinding.FragmentPreviewDialogBinding
 import com.usaclean.sportreelzz.databinding.FragmentTopicDetailsBinding
 
 
-class PreviewDialogFragment(val videoUri: Uri) : DialogFragment() {
+class PreviewDialogFragment(val videoUri: Uri, val cancel: () -> Unit) :
+    DialogFragment() {
 
     private var _binding: FragmentPreviewDialogBinding? = null
     private val binding get() = _binding!!
     private lateinit var fragmentContext: Context
 
-    lateinit var mDialog: ProgressDialog
+    private lateinit var mDialog: ProgressDialog
     var videoUrl = ""
     var type = ""
 
@@ -36,12 +37,12 @@ class PreviewDialogFragment(val videoUri: Uri) : DialogFragment() {
     ): View? {
         _binding = FragmentPreviewDialogBinding.inflate(inflater)
 
-        mDialog = ProgressDialog(fragmentContext)
+       /* mDialog = ProgressDialog(fragmentContext)
         mDialog.apply {
             setMessage("Loading...")
             setCancelable(false)
             show()
-        }
+        }*/
 
         player = ExoPlayer.Builder(fragmentContext).build()
 
@@ -56,7 +57,7 @@ class PreviewDialogFragment(val videoUri: Uri) : DialogFragment() {
             player.addListener(object : Player.Listener {
                 override fun onIsPlayingChanged(isPlaying: Boolean) {
                     if (isPlaying) {
-                        mDialog.hide()
+                       // mDialog.hide()
                     }
                 }
 
@@ -68,6 +69,15 @@ class PreviewDialogFragment(val videoUri: Uri) : DialogFragment() {
                     Toast.makeText(fragmentContext, error.message, Toast.LENGTH_SHORT).show()
                 }
             })
+
+            cancelTv.setOnClickListener{
+                cancel.invoke()
+                dismiss()
+            }
+
+            doneTv.setOnClickListener {
+               dismiss()
+            }
         }
         return binding.root
     }
@@ -90,6 +100,6 @@ class PreviewDialogFragment(val videoUri: Uri) : DialogFragment() {
     override fun onDestroyView() {
         super.onDestroyView()
         player.release()
-        mDialog.hide()
+       // mDialog.hide()
     }
 }

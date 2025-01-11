@@ -8,10 +8,10 @@
     <string name="sportreelzz" translatable="false">CoachClip</string>
     <string name="register_underline"><u><b>Registreren</b></u></string>
     <string name="login_underline"><u><b>Inloggen</b></u></string>
-    <string name="home">Home</string>
-    <string name="my_tpoics">Mijn onderwerpen</string>
+    <string name="home">Startpagina</string>
+    <string name="my_tpoics">Mijn Clip</string>
     <string name="profile">Profiel</string>
-    <string name="login_sub_text">Voer uw gebruikersnaam en wachtwoord in om \n in te loggen op uw account</string>
+    <string name="login_sub_text">Voer uw e-mailadres en wachtwoord in om \nin te loggen op uw account</string>
     <string name="username">E-mailadres*</string>
     <string name="password">Wachtwoord*</string>
     <string name="forgot_password">Wachtwoord vergeten?</string>
@@ -19,13 +19,13 @@
     <string name="new_to_coachclip">Nieuw bij CoachClip?</string>
     <string name="coach">Coach</string>
     <string name="clip">Clip</string>
-    <string name="register_sub_heading">Voer hieronder de gegevens in om een account aan te maken</string>
+    <string name="register_sub_heading">Voer de onderstaande gegevens in om \neen account aan te maken</string>
     <string name="email_address">E-mailadres*</string>
     <string name="already_have_an_account">Heb je al een account?</string>
     <string name="forget_password">Wachtwoord vergeten</string>
     <string name="email_address_with_staric">E-mailadres</string>
-    <string name="submit">Verzenden</string>
-    <string name="add_video_chapters">Videohfdst. toevoegen</string>
+    <string name="submit">Indienen</string>
+    <string name="add_video_chapters">Videohoofdstukken toevoegen</string>
     <string name="add_chapters">Hoofdstukken toevoegen</string>
     <string name="create_a_new_topic">Een nieuwe clip maken</string>
     <string name="subject">Onderwerp</string>
@@ -41,28 +41,28 @@
     <string name="password_without_staric">Wachtwoord</string>
     <string name="save_information">Informatie opslaan</string>
     <string name="filter">Filter</string>
-    <string name="show_results">Resultaten tonen</string>
+    <string name="show_results">Resultaten weergeven</string>
     <string name="my_topics">Mijn clips</string>
     <string name="customer_support">Klantenservice</string>
-    <string name="help_support">Hulp &amp; ondersteuning</string>
+    <string name="help_support">Hulp en ondersteuning</string>
     <string name="delete_account">Account verwijderen</string>
-    <string name="legal">Wettelijk</string>
+    <string name="legal">Juridisch</string>
     <string name="privacy_policy">Privacybeleid</string>
-    <string name="terms_of_service">Gebruiksvoorwaarden</string>
+    <string name="terms_of_service">Servicevoorwaarden</string>
     <string name="chapter">Hoofdstuk</string>
     <string name="delete">Verwijderen</string>
     <string name="edit">Bewerken</string>
     <string name="update_info">Informatie bijwerken</string>
-    <string name="report_clip_or_title">Rapporteer clip</string>
+    <string name="report_clip_or_title">Clip rapporteren</string>
     <string name="sexual_content">Seksuele inhoud</string>
-    <string name="violent_or_repulsive_content">Gewelddadige of afstotelijke inhoud</string>
+    <string name="violent_or_repulsive_content">Gewelddadige of weerzinwekkende inhoud</string>
     <string name="hateful_or_abusive_content">Haatdragende of beledigende inhoud</string>
     <string name="harmful_or_dangerous_acts">Schadelijke of gevaarlijke handelingen</string>
     <string name="spam_or_misleading">Spam of misleidend</string>
     <string name="child_abuse">Kindermisbruik</string>
-    <string name="report">Melden</string>
+    <string name="report">Rapporteren</string>
     <string name="cancel">Annuleren</string>
-    <string name="select_language">Taal selecteren</string>
+    <string name="select_language">Selecteer taal</string>
     <string name="select_sports">Selecteer sporten</string>
     <string name="enter_comment_txt">Voer reactie in</string>
 
@@ -103,11 +103,18 @@
     </array>
 
     <string name="replies">Reacties</string>
-    <string name="enter_reply">Voer antwoord in</string>
+    <string name="enter_reply">Voer reactie in</string>
     <string name="languages">Talen</string>
-    <string name="english">English</string>
-    <string name="dutch">Dutch</string>
+    <string name="english">Engels</string>
+    <string name="dutch">Nederlands</string>
     <string name="create_clip">Clip maken</string>
     <string name="preview_video"><u>Voorbeeld</u></string>
+    <!-- TODO: Verwijder of wijzig deze tijdelijke tekst -->
+    <string name="hello_blank_fragment">Hallo lege fragment</string>
+    <string name="full_name">Gebruikersnaam</string>
+    <string name="clear">Wissen</string>
+    <string name="done">Klaar</string>
+    <string name="video_details">Videodetails</string>
 </resources>
+
 

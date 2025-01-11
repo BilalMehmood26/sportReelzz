@@ -10,7 +10,7 @@
     <string name="home">Home</string>
     <string name="my_tpoics">My Clip</string>
     <string name="profile">Profile</string>
-    <string name="login_sub_text">Enter your Username and password to login to \nyour account</string>
+    <string name="login_sub_text">Enter your email address and password to login to \nyour account</string>
     <string name="username">Email Address*</string>
     <string name="password">Password*</string>
     <string name="forgot_password">Forgot Password?</string>
@@ -109,4 +109,8 @@
     <string name="preview_video"><u>Preview</u></string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="full_name">Username</string>
+    <string name="clear">Clear</string>
+    <string name="done">Done</string>
+    <string name="video_details">Video Details</string>
 </resources>

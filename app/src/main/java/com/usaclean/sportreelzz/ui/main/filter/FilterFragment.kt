@@ -57,7 +57,9 @@ class FilterFragment(private val callBack: (String, String, List<Filter>, List<F
         Filter(title = "Cycling", image = R.drawable.ic_cycling),
         Filter(title = "Rugby", image = R.drawable.ic_rugby),
         Filter(title = "Skiing/Snowboarding", image = R.drawable.ic_snowboarding),
-        Filter(title = "Yoga/Pilates", image = R.drawable.ic_yoga_pilates)
+        Filter(title = "Yoga/Pilates", image = R.drawable.ic_yoga_pilates),
+        Filter(title = "Dart", image = R.drawable.ic_dart)
+
     )
 
     override fun onCreateView(
@@ -104,6 +106,20 @@ class FilterFragment(private val callBack: (String, String, List<Filter>, List<F
                     filteredSportsList.clear()
                     filteredSportsList.addAll(it)
                 }
+
+            clearTv.setOnClickListener {
+                subjectEt.text.clear()
+                questionEditText.text.clear()
+                Paper.book().delete("subject")
+                Paper.book().delete("question")
+                Paper.book().delete("languageList")
+                Paper.book().delete("sportsList")
+
+                val subject = subjectEt.text.toString()
+                val question = questionEditText.text.toString()
+                callBack.invoke(subject, question, filteredSportsList, filteredLanguageList)
+                dismiss()
+            }
 
             val layoutManager = FlexboxLayoutManager(context)
             sportsRv.layoutManager = layoutManager

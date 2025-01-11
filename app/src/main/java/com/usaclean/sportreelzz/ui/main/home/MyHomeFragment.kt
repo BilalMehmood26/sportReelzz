@@ -74,7 +74,8 @@ class MyHomeFragment : Fragment() {
         IconSpinnerItem(text = "Cycling", iconRes = R.drawable.ic_cycling),
         IconSpinnerItem(text = "Rugby", iconRes = R.drawable.ic_rugby),
         IconSpinnerItem(text = "Yoga/Pilates", iconRes = R.drawable.ic_yoga_pilates),
-        IconSpinnerItem(text = "Skiing/Snowboarding", iconRes = R.drawable.ic_snowboarding)
+        IconSpinnerItem(text = "Skiing/Snowboarding", iconRes = R.drawable.ic_snowboarding),
+        IconSpinnerItem(text = "Dart", iconRes = R.drawable.ic_dart)
     )
 
     private var selectedLanguage: String = ""
